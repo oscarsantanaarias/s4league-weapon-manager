@@ -1,0 +1,109 @@
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<itemlist>
+        
+        <item item_key="2010019">
+        <base name="batman_handgun" name_key="NAME316" attrib_comment_key="TIP316" feature_comment_key="F_TEXT272" sex="unisex"/>
+        <graphic icon_image="batman_handgun.dds"/>
+        <esperchip/>
+        <etc/>
+        <sequence/>
+    </item> 
+    
+
+        <item item_key="2010059">
+        <base name="neon_smash" name_key="NAME317" attrib_comment_key="TIP317" feature_comment_key="F_TEXT272" sex="unisex"/>
+        <graphic icon_image="icon_neon_smash.png"/>
+        <esperchip/>
+        <etc/>
+        <sequence/>
+    </item> 
+    
+        <item item_key="2000094">
+        <base name="axe" name_key="NAME318" attrib_comment_key="TIP318" feature_comment_key="F_TEXT272" sex="unisex"/>
+        <graphic icon_image="icon_axe.png"/>
+        <esperchip/>
+        <etc/>
+        <sequence/>
+    </item> 
+    
+        <item item_key="2000095">
+        <base name="escanoraxe" name_key="NAME319" attrib_comment_key="TIP319" feature_comment_key="F_TEXT272" sex="unisex"/>
+        <graphic icon_image="escanoraxe.tga"/>
+        <esperchip/>
+        <etc/>
+        <sequence/>
+    </item> 
+    
+        <item item_key="2000096">
+        <base name="counter_c" name_key="NAME320" attrib_comment_key="TIP320" feature_comment_key="F_TEXT272" sex="unisex"/>
+        <graphic icon_image="counter_c.dds"/>
+        <esperchip/>
+        <etc/>
+        <sequence/>
+    </item> 
+    
+        <item item_key="2000097">
+        <base name="s4cdagger" name_key="NAME321" attrib_comment_key="TIP321" feature_comment_key="F_TEXT272" sex="unisex"/>
+        <graphic icon_image="s4cdagger.dds"/>
+        <esperchip/>
+        <etc/>
+        <sequence/>
+    </item> 
+    
+        <item item_key="2000098">
+        <base name="sword_biodag_special" name_key="NAME322" attrib_comment_key="TIP322" feature_comment_key="F_TEXT272" sex="unisex"/>
+        <graphic icon_image="icon_sword_biodag_special.dds"/>
+        <esperchip/>
+        <etc/>
+        <sequence/>
+    </item> 
+    
+        <item item_key="2000099">
+        <base name="bluesword" name_key="NAME323" attrib_comment_key="TIP323" feature_comment_key="F_TEXT272" sex="unisex"/>
+        <graphic icon_image="bluesword.png"/>
+        <esperchip/>
+        <etc/>
+        <sequence/>
+    </item> 
+    
+        <item item_key="2000100">
+        <base name="excalibur" name_key="NAME324" attrib_comment_key="TIP324" feature_comment_key="F_TEXT272" sex="unisex"/>
+        <graphic icon_image="icon_excalibur.dds"/>
+        <esperchip/>
+        <etc/>
+        <sequence/>
+    </item> 
+    
+        <item item_key="2000101">
+        <base name="golden_lgndz_sword" name_key="NAME325" attrib_comment_key="TIP325" feature_comment_key="F_TEXT272" sex="unisex"/>
+        <graphic icon_image="icon_golden_lgndz_sword.png"/>
+        <esperchip/>
+        <etc/>
+        <sequence/>
+    </item> 
+    
+        <item item_key="2000102">
+        <base name="ps_pillow" name_key="NAME326" attrib_comment_key="TIP326" feature_comment_key="F_TEXT272" sex="unisex"/>
+        <graphic icon_image="icon_ps_pillow.dds"/>
+        <esperchip/>
+        <etc/>
+        <sequence/>
+    </item> 
+    
+        <item item_key="2000103">
+        <base name="strangesword" name_key="NAME327" attrib_comment_key="TIP327" feature_comment_key="F_TEXT272" sex="unisex"/>
+        <graphic icon_image="icon_strangesword.png"/>
+        <esperchip/>
+        <etc/>
+        <sequence/>
+    </item> 
+    
+        <item item_key="2000104">
+        <base name="sword_mystical" name_key="NAME328" attrib_comment_key="TIP328" feature_comment_key="F_TEXT272" sex="unisex"/>
+        <graphic icon_image="icon_sword_mystical.dds"/>
+        <esperchip/>
+        <etc/>
+        <sequence/>
+    </item> 
+    </itemlist>

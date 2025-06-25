@@ -1,0 +1,124 @@
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<weapon_lua_list>
+            
+	<lua_func item_key="2010019" state="left_attack" weapon="StandardRevolver2" ani="UseWeapon1State_Revolver2"/>
+	<lua_func item_key="2010019" state="normal" ani="NormalState_Revolver2"/>
+	<lua_func item_key="2010019" state="run" ani="RunState_Revolver2"/>
+	<lua_func item_key="2010019" state="damage" ani="DamageState_Revolver2"/>
+	<lua_func item_key="2010019" state="reload" ani="ReloadState_Revolver2"/>
+	
+
+    <lua_func item_key="2010059" state="left_attack" weapon="StandardSmg3gun" ani="UseWeapon1State_SMG3Gun"/>
+	<lua_func item_key="2010059" state="right_weak" weapon="StandardSmg3sword" ani="UseWeapon2WeakState_SMG3Sword"/>
+	<lua_func item_key="2010059" state="right_strong" weapon="StandardSmg3sword" ani="UseWeapon2StrongState_SMG3Sword"/>
+	<lua_func item_key="2010059" state="normal" ani="NormalState_SMG3"/>
+	<lua_func item_key="2010059" state="run" ani="RunState_SMG3"/>
+	<lua_func item_key="2010059" state="damage" ani="DamageState_SMG3"/>
+	<lua_func item_key="2010059" state="reload" ani="ReloadState_SMG3"/>
+
+    <lua_func item_key="2000094" state="right_attack" weapon="StandardBatSwordAttack2" ani="UseWeapon2State_BatSword"/>
+	<lua_func item_key="2000094" state="left_weak" weapon="StandardBatSwordStandAttack_Strong" ani="SwordAtkStrongState_BatSword"/>
+	<lua_func item_key="2000094" state="left_strong1" weapon="StandardBatSwordStandAttack_Strong" ani="SwordAtkStrongState_BatSword"/>
+	<lua_func item_key="2000094" state="left_jump" weapon="StandardBatSwordJumpAttack" ani="SwordJumpAtkState_BatSword"/>
+	<lua_func item_key="2000094" state="left_strong2" weapon="StandardBatSwordStandAttack_Strong1" ani="SwordAtkStrong1State_BatSword"/>
+	<lua_func item_key="2000094" state="left_attack2" weapon="StandardBatSwordAttack2_2" ani="UseWeapon1Attack2State_BatSword"/>
+	<lua_func item_key="2000094" state="left_attack3" weapon="StandardBatSwordAttack2_3" ani="UseWeapon1Attack3State_BatSword"/>
+	<lua_func item_key="2000094" state="left_attack4" weapon="StandardBatSwordAttack2_4" ani="UseWeapon1Attack4State_BatSword"/>
+	<lua_func item_key="2000094" state="left_attack5" weapon="StandardBatSwordAttack2_5" ani="UseWeapon1Attack5State_BatSword"/>
+	<lua_func item_key="2000094" state="normal" ani="NormalState_BatSword"/>
+	<lua_func item_key="2000094" state="run" ani="RunState_BatSword"/>
+	<lua_func item_key="2000094" state="damage" ani="DamageState_BatSword"/>
+
+    <lua_func item_key="2000095" state="right_attack" weapon="StandardBatSwordAttack2" ani="UseWeapon2State_BatSword"/>
+	<lua_func item_key="2000095" state="left_weak" weapon="StandardBatSwordStandAttack_Strong" ani="SwordAtkStrongState_BatSword"/>
+	<lua_func item_key="2000095" state="left_strong1" weapon="StandardBatSwordStandAttack_Strong" ani="SwordAtkStrongState_BatSword"/>
+	<lua_func item_key="2000095" state="left_jump" weapon="StandardBatSwordJumpAttack" ani="SwordJumpAtkState_BatSword"/>
+	<lua_func item_key="2000095" state="left_strong2" weapon="StandardBatSwordStandAttack_Strong1" ani="SwordAtkStrong1State_BatSword"/>
+	<lua_func item_key="2000095" state="left_attack2" weapon="StandardBatSwordAttack2_2" ani="UseWeapon1Attack2State_BatSword"/>
+	<lua_func item_key="2000095" state="left_attack3" weapon="StandardBatSwordAttack2_3" ani="UseWeapon1Attack3State_BatSword"/>
+	<lua_func item_key="2000095" state="left_attack4" weapon="StandardBatSwordAttack2_4" ani="UseWeapon1Attack4State_BatSword"/>
+	<lua_func item_key="2000095" state="left_attack5" weapon="StandardBatSwordAttack2_5" ani="UseWeapon1Attack5State_BatSword"/>
+	<lua_func item_key="2000095" state="normal" ani="NormalState_BatSword"/>
+	<lua_func item_key="2000095" state="run" ani="RunState_BatSword"/>
+	<lua_func item_key="2000095" state="damage" ani="DamageState_BatSword"/>
+ 
+	<lua_func item_key="2000096" state="left_weak" weapon="StandardCounterSwordAfterDash1" ani="SwordAtkAfterDash1State_CounterSword"/>
+	<lua_func item_key="2000096" state="left_strong1" weapon="StandardCounterSwordCounterAttack" ani="SwordAtkCounterAttack_CounterSword"/>
+	<lua_func item_key="2000096" state="left_jump" weapon="StandardCounterSwordJumpDash" ani="SwordJumpAtkState_CounterSword"/>
+	<lua_func item_key="2000096" state="left_attack2" weapon="StandardCounterSwordAfterDash2" ani="SwordAtkAfterDash2State_CounterSword"/>
+	<lua_func item_key="2000096" state="left_attack3" weapon="StandardCounterSwordAfterDash3" ani="SwordAtkAfterDash3State_CounterSword"/>
+	<lua_func item_key="2000096" state="left_attack4" weapon="StandardCounterSwordAfterDash4" ani="SwordAtkAfterDash4State_CounterSword"/>
+	<lua_func item_key="2000096" state="counter_attack" weapon="StandardCounterSwordCounterAttack" ani="SwordAtkCounterAttack_CounterSword"/>
+	<lua_func item_key="2000096" state="normal" ani="NormalState_CounterSword"/>
+	<lua_func item_key="2000096" state="run" ani="RunState_CounterSword"/>
+	<lua_func item_key="2000096" state="damage" ani="DamageState_CounterSword"/>
+	<lua_func item_key="2000096" state="right_attack" ani="UseWeapon2State_CounterSwordGuard"/>
+
+    <lua_func item_key="2000097" state="right_attack" weapon="StandardSpyDaggerAttack2" ani="UseWeapon2State_SpyDagger"/>
+	<lua_func item_key="2000097" state="normal" ani="NormalState_SpyDagger"/>
+	<lua_func item_key="2000097" state="run" ani="RunState_SpyDagger"/>
+	<lua_func item_key="2000097" state="damage" ani="DamageState_SpyDagger"/>
+	<lua_func item_key="2000097" state="left_attack" weapon="StandardSpyDaggerAttack1" ani="UseWeapon1State_SpyDagger"/>
+
+    <lua_func item_key="2000098" state="right_attack" weapon="StandardSpyDaggerAttack2" ani="UseWeapon2State_SpyDagger"/>
+	<lua_func item_key="2000098" state="normal" ani="NormalState_SpyDagger"/>
+	<lua_func item_key="2000098" state="run" ani="RunState_SpyDagger"/>
+	<lua_func item_key="2000098" state="damage" ani="DamageState_SpyDagger"/>
+	<lua_func item_key="2000098" state="left_attack" weapon="StandardSpyDaggerAttack1" ani="UseWeapon1State_SpyDagger"/>
+
+	<lua_func item_key="2000099" state="right_attack" weapon="StandardPlasmaSwordAttack2" ani="UseWeapon2State_PlasmaSword"/>
+	<lua_func item_key="2000099" state="left_weak" weapon="StandardPlasmaSwordStandAttack_Weak" ani="SwordAtkWeakState_PlasmaSword"/>
+	<lua_func item_key="2000099" state="left_strong1" weapon="StandardPlasmaSwordStandAttack_Strong" ani="SwordAtkStrongState_PlasmaSword"/>
+	<lua_func item_key="2000099" state="left_jump" weapon="StandardPlasmaSwordJumpAttack" ani="SwordJumpAtkState_PlasmaSword"/>
+	<lua_func item_key="2000099" state="left_strong2" weapon="StandardPlasmaSwordStandAttack_Strong1" ani="SwordAtkStrong1State_PlasmaSword"/>
+	<lua_func item_key="2000099" state="normal" ani="NormalState_PlasmaSword"/>
+	<lua_func item_key="2000099" state="run" ani="RunState_PlasmaSword"/>
+    <lua_func item_key="2000099" state="damage" ani="DamageState_PlasmaSword"/>
+	
+	<lua_func item_key="2000100" state="right_attack" weapon="StandardPlasmaSwordAttack2" ani="UseWeapon2State_PlasmaSword"/>
+	<lua_func item_key="2000100" state="left_weak" weapon="StandardPlasmaSwordStandAttack_Weak" ani="SwordAtkWeakState_PlasmaSword"/>
+	<lua_func item_key="2000100" state="left_strong1" weapon="StandardPlasmaSwordStandAttack_Strong" ani="SwordAtkStrongState_PlasmaSword"/>
+	<lua_func item_key="2000100" state="left_jump" weapon="StandardPlasmaSwordJumpAttack" ani="SwordJumpAtkState_PlasmaSword"/>
+	<lua_func item_key="2000100" state="left_strong2" weapon="StandardPlasmaSwordStandAttack_Strong1" ani="SwordAtkStrong1State_PlasmaSword"/>
+	<lua_func item_key="2000100" state="normal" ani="NormalState_PlasmaSword"/>
+	<lua_func item_key="2000100" state="run" ani="RunState_PlasmaSword"/>
+    <lua_func item_key="2000100" state="damage" ani="DamageState_PlasmaSword"/>
+	
+	<lua_func item_key="2000101" state="right_attack" weapon="StandardPlasmaSwordAttack2" ani="UseWeapon2State_PlasmaSword"/>
+	<lua_func item_key="2000101" state="left_weak" weapon="StandardPlasmaSwordStandAttack_Weak" ani="SwordAtkWeakState_PlasmaSword"/>
+	<lua_func item_key="2000101" state="left_strong1" weapon="StandardPlasmaSwordStandAttack_Strong" ani="SwordAtkStrongState_PlasmaSword"/>
+	<lua_func item_key="2000101" state="left_jump" weapon="StandardPlasmaSwordJumpAttack" ani="SwordJumpAtkState_PlasmaSword"/>
+	<lua_func item_key="2000101" state="left_strong2" weapon="StandardPlasmaSwordStandAttack_Strong1" ani="SwordAtkStrong1State_PlasmaSword"/>
+	<lua_func item_key="2000101" state="normal" ani="NormalState_PlasmaSword"/>
+	<lua_func item_key="2000101" state="run" ani="RunState_PlasmaSword"/>
+    <lua_func item_key="2000101" state="damage" ani="DamageState_PlasmaSword"/>
+	
+	<lua_func item_key="2000102" state="right_attack" weapon="StandardPlasmaSwordAttack2" ani="UseWeapon2State_PlasmaSword"/>
+	<lua_func item_key="2000102" state="left_weak" weapon="StandardPlasmaSwordStandAttack_Weak" ani="SwordAtkWeakState_PlasmaSword"/>
+	<lua_func item_key="2000102" state="left_strong1" weapon="StandardPlasmaSwordStandAttack_Strong" ani="SwordAtkStrongState_PlasmaSword"/>
+	<lua_func item_key="2000102" state="left_jump" weapon="StandardPlasmaSwordJumpAttack" ani="SwordJumpAtkState_PlasmaSword"/>
+	<lua_func item_key="2000102" state="left_strong2" weapon="StandardPlasmaSwordStandAttack_Strong1" ani="SwordAtkStrong1State_PlasmaSword"/>
+	<lua_func item_key="2000102" state="normal" ani="NormalState_PlasmaSword"/>
+	<lua_func item_key="2000102" state="run" ani="RunState_PlasmaSword"/>
+    <lua_func item_key="2000102" state="damage" ani="DamageState_PlasmaSword"/>
+	
+	<lua_func item_key="2000103" state="right_attack" weapon="StandardPlasmaSwordAttack2" ani="UseWeapon2State_PlasmaSword"/>
+	<lua_func item_key="2000103" state="left_weak" weapon="StandardPlasmaSwordStandAttack_Weak" ani="SwordAtkWeakState_PlasmaSword"/>
+	<lua_func item_key="2000103" state="left_strong1" weapon="StandardPlasmaSwordStandAttack_Strong" ani="SwordAtkStrongState_PlasmaSword"/>
+	<lua_func item_key="2000103" state="left_jump" weapon="StandardPlasmaSwordJumpAttack" ani="SwordJumpAtkState_PlasmaSword"/>
+	<lua_func item_key="2000103" state="left_strong2" weapon="StandardPlasmaSwordStandAttack_Strong1" ani="SwordAtkStrong1State_PlasmaSword"/>
+	<lua_func item_key="2000103" state="normal" ani="NormalState_PlasmaSword"/>
+	<lua_func item_key="2000103" state="run" ani="RunState_PlasmaSword"/>
+    <lua_func item_key="2000103" state="damage" ani="DamageState_PlasmaSword"/>
+	
+	<lua_func item_key="2000104" state="right_attack" weapon="StandardPlasmaSwordAttack2" ani="UseWeapon2State_PlasmaSword"/>
+	<lua_func item_key="2000104" state="left_weak" weapon="StandardPlasmaSwordStandAttack_Weak" ani="SwordAtkWeakState_PlasmaSword"/>
+	<lua_func item_key="2000104" state="left_strong1" weapon="StandardPlasmaSwordStandAttack_Strong" ani="SwordAtkStrongState_PlasmaSword"/>
+	<lua_func item_key="2000104" state="left_jump" weapon="StandardPlasmaSwordJumpAttack" ani="SwordJumpAtkState_PlasmaSword"/>
+	<lua_func item_key="2000104" state="left_strong2" weapon="StandardPlasmaSwordStandAttack_Strong1" ani="SwordAtkStrong1State_PlasmaSword"/>
+	<lua_func item_key="2000104" state="normal" ani="NormalState_PlasmaSword"/>
+	<lua_func item_key="2000104" state="run" ani="RunState_PlasmaSword"/>
+    <lua_func item_key="2000104" state="damage" ani="DamageState_PlasmaSword"/>
+	</weapon_lua_list>
+            
