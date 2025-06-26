@@ -3,7 +3,7 @@ const mysql = require('mysql2/promise');
 const host = 'localhost';
 const user = 'root';
 const pass = '';
-const db = 's4legion_db';
+const db = 's4db';
 
 async function addtodb(id, name){
     let conexion;
