@@ -30,7 +30,7 @@ async function addtodb(id, name){
 
     if(itemInfo.length > 0 || shopItems.length > 0){
         console.error(`The ID ${id} is already in use in the database, asigning a new ID ${id + 1}`);
-        //si el ID existe devuelve falso y en principal llamo a principal con el ID nuevo osea, que lo genera automatico en principal, 
+        //if the ID exists, it returns false and in main I call main with the new ID, which automatically generates it in main,
         return 2;
     }
 
