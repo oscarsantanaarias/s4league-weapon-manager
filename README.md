@@ -4,6 +4,8 @@ PLEASE replace the weapon folder with the one here, this includes all of them.
 https://www.mediafire.com/file/07uvw9dsiqujhb6/weapon.rar/file
 
 IF YOU WANT TO ADD THE ITEMS TO THE DATABASE change this to true: const useDB = false;
+
+
 A tool that automatically adds all weapons to the S4League game X7 and XML files.
 NODE.JS install required for this and then just open CMD as an admin, go to the folder location and do node main.js to execute the script.
 
