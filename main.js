@@ -21,9 +21,7 @@ let nameID = 310;
 let tipID = 310;
 
 //Change this to false, I you don't want your items to be added to your database.
-const useDB = false;
-//I don't use the variable yet, it will be assigned below
-let resAddDb;
+const useDB = true;
 
 
 
@@ -64,14 +62,9 @@ async function addNewItem(id, final, item_scn, item_dds, iteminfoID, weaType){
 
         const resItemInfo = await verifyInfox7(nameID, tipID, weaName);
         
-        
-    //Here this variable if true will add items to your db
-    //inside the if, it verifies if the current ID is available in the database if not
-    //id will be increased by +1 and recall to keep checking it takes a moment, but it's better than doing it one by one.
-        if(useDB){
-        resAddDb = await addtodb(id, weaName);
-        }
-        
+        //I don't use the variable yet, it will be assigned below
+        let resAddDb;
+ 
       
        
         //Here verify if Item name and Ids are available for itemInfo
@@ -136,6 +129,10 @@ async function addNewItem(id, final, item_scn, item_dds, iteminfoID, weaType){
       //Here I verify if I am using DB and based on connection db return I make a desicion.
       if(useDB){
 
+       
+        resAddDb = await addtodb(id, weaName);
+        
+
         //IF ID was found I recall the function
       if(resAddDb === 2){
          console.log('ID was found verifying DB again...');
@@ -146,6 +143,8 @@ async function addNewItem(id, final, item_scn, item_dds, iteminfoID, weaType){
         console.error('An error occured with the conexion to database, stopping...');
         return;
       }
+
+      console.log('SIIII DISPONIBLE');
 
     }
 
