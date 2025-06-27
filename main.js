@@ -143,9 +143,7 @@ async function addNewItem(id, final, item_scn, item_dds, iteminfoID, weaType){
         console.error('An error occured with the conexion to database, stopping...');
         return;
       }
-
-      console.log('SIIII DISPONIBLE');
-
+    console.log(`${id} is available! assigning this one!.`);
     }
 
 
