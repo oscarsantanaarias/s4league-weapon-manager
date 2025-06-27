@@ -22,6 +22,8 @@ let tipID = 310;
 
 //Change this to false, I you don't want your items to be added to your database.
 const useDB = false;
+//I don't use the variable yet, it will be assigned below
+let resAddDb;
 
 
 
@@ -62,8 +64,7 @@ async function addNewItem(id, final, item_scn, item_dds, iteminfoID, weaType){
 
         const resItemInfo = await verifyInfox7(nameID, tipID, weaName);
         
-        //I don't use the variable yet, it will be assigned below
-        let resAddDb;
+        
     //Here this variable if true will add items to your db
     //inside the if, it verifies if the current ID is available in the database if not
     //id will be increased by +1 and recall to keep checking it takes a moment, but it's better than doing it one by one.
