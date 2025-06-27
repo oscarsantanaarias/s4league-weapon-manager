@@ -1,7 +1,7 @@
 # s4league-weapon-manager
 
-PLEASE replace the weapon folder with the one here, this includes all of them.
-https://www.mediafire.com/file/07uvw9dsiqujhb6/weapon.rar/file
+PLEASE replace the resources folder with the one here, this includes all of them.
+https://www.mediafire.com/file/7oi292jul8mcd33/resources.rar/file
 
 IF YOU WANT TO ADD THE ITEMS TO THE DATABASE change this to true: const useDB = false;
 
