@@ -6,7 +6,7 @@ https://www.mediafire.com/file/7oi292jul8mcd33/resources.rar/file
 IF YOU WANT TO ADD THE ITEMS TO THE DATABASE change this to true: const useDB = false;
 
 
-A tool that automatically adds all weapons to the S4League game X7 and XML files.
+A tool that automatically adds all weapons to the S4League game X7 and XML files and database saving a lot of time!.
 NODE.JS install required for this and then just open CMD as an admin, go to the folder location and do node main.js to execute the script.
 
 The tool works based on files in each folders.
