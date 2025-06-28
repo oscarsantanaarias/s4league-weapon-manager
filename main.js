@@ -143,7 +143,9 @@ async function addNewItem(id, final, item_scn, item_dds, iteminfoID, weaType){
         console.error('An error occured with the conexion to database, stopping...');
         return;
       }
-    console.log(`${id} is available! assigning this one!.`);
+
+      console.log('SIIII DISPONIBLE');
+
     }
 
 
@@ -318,6 +320,8 @@ async function Ejecutar(iteminfoID, weapon_files){
          
 
                 const ele_icon = 'icon_' + elemento;
+                const ele_icono = 'Icon_' + elemento;
+                
           
             for(let a = 0; a < imgs.length; a++){
 
@@ -329,10 +333,11 @@ async function Ejecutar(iteminfoID, weapon_files){
                       await addNewItem(inicio, final,  models[i] ,imgs[a], iteminfoID, weaType);
 
 
-                    } else if(ele_icon === cleanImg){
+                    } else if(ele_icon === cleanImg || ele_icono === cleanImg){
         
                         await addNewItem(inicio, final, models[i] ,imgs[a], iteminfoID, weaType);
-                    } else if(models.includes(cleanImg + '_r.scn') && models.includes(cleanImg + '_l.scn')){
+                    } else if(models.includes(cleanImg + '_r.scn') && models.includes(cleanImg + '_l.scn') || models.includes(cleanImg.split('icon_')[1] + '_r.scn') && models.includes(cleanImg.split('icon_')[1]  + '_l.scn') || models.includes(cleanImg.split('Icon_')[1] + '_r.scn') && models.includes(cleanImg.split('Icon_')[1]  + '_l.scn')){
+                      console.log('La imagen limpia es',cleanImg);
                          await addNewItem(inicio, final, imgs[a].split('.')[0] + '.scn' ,imgs[a], iteminfoID, weaType);
                     }
                 }
