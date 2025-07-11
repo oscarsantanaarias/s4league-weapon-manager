@@ -2,6 +2,11 @@ Hello, my name is Oscar Santana I have created this tool to help the community.
 
 The only requirement is node.js installation.
 
+The XBN XML converter has been added just by clicking it will be converted in seconds.
+Very important:
+For weapons with more than two scn, the software looks for weapon_r or _l.scn BOTH of them must be in the folder to be added, if not detected will not be added.
+for those with one scn, it looks for same name or for both  it looks for icon_imagename.whatever format, or imagen_icon.any format etc.
+
 In Item Manager.bat you can change the location if you don't want to be opening CMD each time.
 Here is the current location: cd /d C:\ItemManager change it to whatever is your  ItemManager folder location.
 
