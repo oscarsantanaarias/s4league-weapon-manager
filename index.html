@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>S4League Item Manager</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Orbitron:wght@500;700&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+  <div class="contenedor">
+    <header>
+      <h1>Item Manager</h1>
+      <nav>
+        <ul></ul>
+      </nav>
+    </header>
+
+    <section class="mid_cont">
+      
+      <section class="midcontent">
+
+        <div class="filter">
+
+          <div class="selects">
+            <div class="folderInfo">
+              
+              <button class="selectFolder" id="selectFolder">Select Folder</button>
+              <p id="path" class="path">Select Path:</p>
+            </div>
+              <div class="dbs" >
+                <button class="selectDB">Manage Database</button>
+                
+                <div class="dbinfo" >
+                  <a href="#" class="salir">X</a>
+                  <ul>
+                    <h3>Connection Information</h3>
+                    <li>
+                      <a href="#">Host: <input class="host" type="text" name="" id="" placeholder="localhost"></a>
+                    </li>
+                    <li>
+                      <a href="#">Username: <input class="user" type="text" name="" id="" placeholder=""></a>
+                    </li>
+                    <li>
+                      <a href="#">Password: <input class="pass" type="text" name="" id="" placeholder=""></a>
+                    </li>
+                    <li>
+                      <a href="#">Database: <input class="database" type="text" name="" id="" placeholder=""></a>
+                    </li>
+                    
+                    <h3 class="shop_h3">Shop database tables</h3>
+
+                     <li>
+                      <a href="#">Shop Items: <input class="shop_items" type="text" name="" id="" placeholder="shop_items"></a>
+                    </li>
+
+                    <li>
+                      <a href="#">Shop Iteminfos: <input class="shop_iteminfos" type="text" name="" id="" placeholder="shop_iteminfos"></a>
+                    </li>
+                    
+                    <li class="save_li">
+                      <button class="save">Save</button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+          
+          </div>
+          <div class="convertbtns">
+            <button class="XML" id="XML">XML to XBN</button>
+              <button class="XBN" id="XBN">XBN to XML</button>
+          </div>
+          <div class="botones">
+            <div class="all_filter_btn">
+          <a href="#" class="AddItems">Add Items</a>
+          <div id="loader" style="display:none" class="loader-container">
+          <p class="addtext">Adding Items...</p>
+          <div class="spinner"></div>
+         
+          </div>
+          <a href="#" onclick="mostrar(items,'all')" class="todos">Show All</a>
+          <a href="#" onclick="mostrar(items,'Added')" class="anadidos">Added</a>
+          <a href="#" onclick="mostrar(items,'Skipped')" class="saltados">Skipped</a>
+          </div>
+
+          <div class="usedb">
+              <button class="enabledb"><span></span>Use DB</button>
+          </div>
+          </div>
+          
+        </div>
+
+       
+
+        
+        <div class="card_container">
+         
+
+
+        </div>
+
+        
+      </section>
+    </section>
+  </div>
+
+<script>
+ 
+window.addEventListener('DOMContentLoaded', async () => {
+  const config = await window.puente.loadDBConfig();
+  if (config) {
+    Object.entries(config).forEach(([key, value]) => {
+      const input = document.querySelector(`.${key}`);
+      if (input) input.placeholder = value;
+    });
+  }
+});
+
+    const select = document.querySelector('.selectFolder');
+    const loca = document.querySelector('.path');
+    const addbtn = document.querySelector('.AddItems');
+    const container = document.querySelector('.card_container');  
+    const dbbtn = document.querySelector('.enabledb');
+    const salir = document.querySelector('.salir');
+    const dbcheckmark = document.querySelector('.enabledb span');
+    const selectDB = document.querySelector('.selectDB');
+    const loader = document.getElementById('loader');
+
+    //ALL db manage info inputs + btn
+    const host = document.querySelector('.host');
+    const user = document.querySelector('.user');
+    const pass = document.querySelector('.pass');
+    const database = document.querySelector('.database');
+    const shop_items = document.querySelector('.shop_items');
+    const shop_iteminfos = document.querySelector('.shop_iteminfos');
+    const savebtn = document.querySelector('.save');
+    const xbnbtn = document.querySelector('.XBN');
+    const xmlbtn = document.querySelector('.XML');
+
+    let dbdata = false;
+    let useDB = false;
+    let path = false;
+    let items;
+
+  dbbtn.addEventListener('click', async () => {
+    if(!useDB){
+   
+   
+ 
+      const data = {
+      host: host.value.trim() || host.placeholder,
+      user: user.value.trim() || user.placeholder,
+      pass: pass.value.trim() || pass.placeholder,
+      database: database.value.trim() || database.placeholder,
+      shop_items: shop_items.value.trim() || shop_items.placeholder,
+      shop_iteminfos: shop_iteminfos.value.trim() || shop_iteminfos.placeholder
+    };
+
+
+    await window.puente.saveDBConfig(data);
+   
+      dbcheckmark.textContent = '✓' + dbcheckmark.textContent;
+      dbbtn.style.backgroundColor = '#27ae60';
+      useDB = true;
+      
+
+    } else {
+      useDB = false;
+      dbbtn.style.backgroundColor = '#e74c3c';
+      dbcheckmark.innerHTML = '';
+
+    }
+
+
+ 
+      
+    
+   
+  });
+
+ 
+
+   savebtn.addEventListener('click', async (e) => {
+    e.preventDefault();
+
+   
+
+    const confirmed = await window.puente.confirmDialog();
+   
+    if (confirmed) {
+
+      const data = {
+      host: host.value.trim() || host.placeholder,
+      user: user.value.trim() || user.placeholder,
+      pass: pass.value.trim() || pass.placeholder,
+      database: database.value.trim() || database.placeholder,
+      shop_items: shop_items.value.trim() || shop_items.placeholder,
+      shop_iteminfos: shop_iteminfos.value.trim() || shop_iteminfos.placeholder
+    };
+
+
+    await window.puente.saveDBConfig(data);
+    document.querySelector('.dbinfo').style.display = 'none';
+      
+      
+    }
+  });
+
+
+
+  selectDB.addEventListener('click', () => {
+    document.querySelector('.dbinfo').style.display = 'flex';
+      
+  });
+
+  salir.addEventListener('click', () => {
+    document.querySelector('.dbinfo').style.display = 'none';
+
+
+  })
+
+
+  xbnbtn.addEventListener('click', async () => {
+    await window.puente.XBNtoXML();
+    alert('File Converted from XBN to XML.');
+
+  });
+
+  xmlbtn.addEventListener('click', async () => {
+    await window.puente.XMLtoXBN();
+    alert('File Converted from XML to XBN.');
+
+  });
+
+    function mostrar(arr, tipo){
+    
+    container.innerHTML = '';
+    const cards = document.createElement('div');
+    cards.className = 'cards';
+
+    const filtrar = (tipo === 'all') ? arr : arr.filter(item => item.status === tipo);
+
+    filtrar.forEach(item => {
+      
+      const card = document.createElement('div');
+      card.className = 'card';
+
+      card.innerHTML = `
+         <div class="img">
+              <img src="${item.src}"/>
+            </div>
+            <div class="desc">
+              <p class="name">${item.nombre}</p>
+              <p class="status ${item.status}">${item.status}</p>
+            </div>
+      `;
+
+      cards.appendChild(card);
+    });
+
+    container.appendChild(cards);
+
+
+  }
+
+  select.addEventListener('click', async() => {
+      const path = await window.puente.selectFolder()
+      if(path){
+        loca.textContent = path;
+        await window.puente.dirLocation(path);
+        container.innerHTML = "";
+        items = [];
+      } else {
+        loca.textContent = 'No seleccionado';
+      }
+  });
+
+  addbtn.addEventListener('click', async() => {
+  loader.style.display = 'flex';
+  addbtn.disabled = true;
+   
+  try {
+    const anadidos = await window.puente.addItems(useDB);
+    items = anadidos;
+    mostrar(items, 'all');
+
+  } catch(e){
+    alert('An error occured adding items: ', e);
+  } finally {
+    loader.style.display = 'none';
+    addbtn.disabled = false;
+  }
+   
+  });
+
+
+
+
+
+//Content to simulate a db and add items and remove buttons
+//const items = [
+//  { name: 'Taser Sword', status: 'Added', src: 'resources/weapon/melee/PlasmaSword/imgs/bluesword.png' },
+//  { name: 'Blue Sword', status: 'Added', src: 'resources/weapon/melee/PlasmaSword/imgs/bluesword.png' },
+//  { name: 'PS Pillow', status: 'Skipped', src: 'resources/weapon/melee/PlasmaSword/imgs/icon_ps_pillow.png' },
+//  { name: 'Strange Sword', status: 'Skipped', src: 'resources/weapon/melee/PlasmaSword/imgs/icon_strangesword.png' },
+//  { name: 'Mystical Sword', status: 'Added', src: 'resources/weapon/melee/PlasmaSword/imgs/icon_sword_mystical.png' },
+//  { name: 'Golden Lgndz Sword', status: 'Skipped', src: 'resources/weapon/melee/PlasmaSword/imgs/icon_golden_lgndz_sword.png' }
+//, { name: 'Taser Sword', status: 'Added', src: 'resources/weapon/melee/PlasmaSword/imgs/bluesword.png' },
+//  { name: 'Blue Sword', status: 'NotAdded', src: 'resources/weapon/melee/PlasmaSword/imgs/bluesword.png' },
+//  { name: 'PS Pillow', status: 'Skipped', src: 'resources/weapon/melee/PlasmaSword/imgs/icon_ps_pillow.png' },
+//  { name: 'Strange Sword', status: 'Skipped', src: 'resources/weapon/melee/PlasmaSword/imgs/icon_strangesword.png' },
+//  { name: 'Mystical Sword', status: 'NotAdded', src: 'resources/weapon/melee/PlasmaSword/imgs/icon_sword_mystical.png' },
+//  { name: 'Golden Lgndz Sword', status: 'Skipped', src: 'resources/weapon/melee/PlasmaSword/imgs/icon_golden_lgndz_sword.png' }
+//
+//  ];
+//
+
+  
+
+
+
+</script>
+
+</body>
+</html>
+        
