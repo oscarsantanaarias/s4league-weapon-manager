@@ -1,6 +1,8 @@
 Hello, my name is Oscar Santana I have created this tool to help the community.
 
 The only requirement is node.js installation.
+If you create a folder called ItemManager and extract all there just use Item Managet.bat and it will open the program for you.
+https://www.youtube.com/watch?v=VFP6bTv9GgE&ab_channel=SneoCode
 
 The XBN XML converter has been added just by clicking it will be converted in seconds.
 Very important:
