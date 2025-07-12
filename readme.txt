@@ -6,7 +6,7 @@ https://www.youtube.com/watch?v=VFP6bTv9GgE&ab_channel=SneoCode
 
 The XBN XML converter has been added just by clicking it will be converted in seconds.
 Very important:
-Move All resources.rar out of the folder in order for the program to work.
+SELECT THE FOLDER RESOURCES in order to make the software work, it has to specifically be resources.
 For weapons with more than two scn, the software looks for weapon_r or _l.scn BOTH of them must be in the folder to be added, if not detected will not be added.
 for those with one scn, it looks for same name or for both  it looks for icon_imagename.whatever format, or imagen_icon.any format etc.
 
