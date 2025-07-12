@@ -6,6 +6,9 @@ https://www.youtube.com/watch?v=VFP6bTv9GgE&ab_channel=SneoCode
 
 The XBN XML converter has been added just by clicking it will be converted in seconds.
 Very important:
+On Weapons.xbn > xml where it says: slot_image_file make it takes the icon img with the icon_name, if your texture has another be aware and change the name for
+texture name.
+
 SELECT THE FOLDER RESOURCES in order to make the software work, it has to specifically be resources.
 For weapons with more than two scn, the software looks for weapon_r or _l.scn BOTH of them must be in the folder to be added, if not detected will not be added.
 for those with one scn, it looks for same name or for both  it looks for icon_imagename.whatever format, or imagen_icon.any format etc.
