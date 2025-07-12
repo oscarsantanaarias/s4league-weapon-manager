@@ -13,6 +13,21 @@ function MakePlasmaSwordDesc(NameID, DescID, ItemName){
  
 }
 
+
+function MakeBreakerDesc(NameID, DescID, ItemName){
+     if(!NameID || !ItemName){
+    console.error('Plasma ID not defined at Make Plasma Desc.');
+    return false;
+    }
+
+    return {
+        NameDesc: `<string key="NAME${NameID}" eng="${ItemName || 'Breaker'}" spa="${ItemName || 'Breaker'}"/>`,
+
+        TipDesc: `<string key="TIP${DescID}" kor="망치형의 근접무기. 긴 리치와 무게를 살려, 넓은 범위를 커버하는 강력한 공격을 구사한다." ger="Meleewaffe in Hammerform. Großflächige und kraftvolle Fernkampfattacken." eng="Hammer Style melee weapon. Wide and powerful long range attacks." fre="Une arme de mêlée du même style qu'un marteau. Permet des attaques puissantes et de longue portée." spa="Arma Hammer Estilo Melee. Ancha y poderosa con un largo rango de ataque." ita="Arma per il corpo a corpo che ricorda un martello. I danni sferrati a distanza sono ingenti." rus="Ударное оружие ближнего боя. Широкие и мощные атаки большой дальности ." tha="อาวุธแบบประชิด ประเภทค้อน มีอำนาจการทำลายในระยะไกลที่สูง" />`
+    }
+ 
+}
+
 function MakeCounterSwordDesc(NameID, DescID, ItemName){
      if(!NameID || !DescID || !ItemName){
     console.error('Counter Sword ID not defined at Make Counter Sword Desc.');
@@ -603,4 +618,4 @@ function MakeTurrentDesc(NameID, DescID, ItemName){
 
 
 module.exports = { MakeTurrentDesc, MakeSubmachineDesc, MakeSparkRifleDesc, MakeSmashDesc, MakeShotGunDesc, MakeSharpshootingDesc, MakeSentryStunDesc, MakeSentryGunDesc, MakeSemiRifleDesc, MakeRailGunDesc, MakeRocketLauncherDesc, 
-MakeRevolverDesc, MakeRescueGunDesc, MakeMineGunDesc, MakeMindShockDesc, MakeMindHealDesc, MakeLightMachineGunDesc, MakeLightBombDesc, MakeHomingDesc, MakeHeavyMachineGunDesc, MakeHandGunDesc, MakeGaussDesc, MakeEarthBombDesc, MakeDualMagnumDesc, MakeCannonDesc, MakeAssaultDesc, MakeAirGunDesc, MakeVitalClawDesc, MakeTwinBladesDesc, MakeSigmaBladeDesc, MakeKatanaDesc, MakeIronBootsDesc, MakeFistDesc, MakeExoDesc, MakeDaggerDesc, MakeBatDesc, MakeCounterSwordDesc, MakePlasmaSwordDesc} ;
+MakeRevolverDesc, MakeRescueGunDesc ,MakeBreakerDesc, MakeMineGunDesc, MakeMindShockDesc, MakeMindHealDesc, MakeLightMachineGunDesc, MakeLightBombDesc, MakeHomingDesc, MakeHeavyMachineGunDesc, MakeHandGunDesc, MakeGaussDesc, MakeEarthBombDesc, MakeDualMagnumDesc, MakeCannonDesc, MakeAssaultDesc, MakeAirGunDesc, MakeVitalClawDesc, MakeTwinBladesDesc, MakeSigmaBladeDesc, MakeKatanaDesc, MakeIronBootsDesc, MakeFistDesc, MakeExoDesc, MakeDaggerDesc, MakeBatDesc, MakeCounterSwordDesc, MakePlasmaSwordDesc} ;
