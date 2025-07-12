@@ -20,7 +20,7 @@ const { app, BrowserWindow, dialog, ipcMain } = require('electron');
 const weapons_lua = require('./weapon_lua_func');
 const {verifyFields, verifyItemX7, verifyInfox7, verifyWeaponLua, verifyWeaponsXML , verifyItem_xml, weaponlua, iteminfox7, weaponxml, itemx7, itemxml,  melee, special, sentries, guns, snipers, heavies, thrown, id_range, verifyString_tableXML, verifyString_tablex7, iteminfoStringX7, iteminfoStringXML } = require('./verifiers');
 const { read } = require('fs');
-const { MakeTurrentDesc, MakeSubmachineDesc, MakeSparkRifleDesc, MakeSmashDesc, MakeShotGunDesc, MakeSharpshootingDesc, MakeSentryStunDesc, MakeSentryGunDesc, MakeSemiRifleDesc, MakeRailGunDesc, MakeRocketLauncherDesc, 
+const { MakeTurrentDesc, MakeSubmachineDesc, MakeSparkRifleDesc,MakeBreakerDesc, MakeSmashDesc, MakeShotGunDesc, MakeSharpshootingDesc, MakeSentryStunDesc, MakeSentryGunDesc, MakeSemiRifleDesc, MakeRailGunDesc, MakeRocketLauncherDesc, 
 MakeRevolverDesc, MakeRescueGunDesc, MakeMineGunDesc, MakeMindShockDesc, MakeMindHealDesc, MakeLightMachineGunDesc, MakeLightBombDesc, MakeHomingDesc, MakeHeavyMachineGunDesc, MakeHandGunDesc, MakeGaussDesc, MakeEarthBombDesc, MakeDualMagnumDesc, MakeCannonDesc, MakeAssaultDesc, MakeAirGunDesc, MakeVitalClawDesc, MakeTwinBladesDesc, MakeSigmaBladeDesc, MakeKatanaDesc, MakeIronBootsDesc, MakeFistDesc, MakeExoDesc, MakeDaggerDesc, MakeBatDesc, MakeCounterSwordDesc, MakePlasmaSwordDesc } = require('./makeItemInfo');
 const { addtodb } = require('./db')
 const { testConnection } = require('./conexion');
@@ -435,6 +435,7 @@ async function Ejecutar(iteminfoID, weapon_files, host, user, pass, db){
             //weatype is the weapon type y weaFiles its folder. 
             
 
+            console.log('EL ESSSS', weaType);
             const imgs = weaFiles.imgs;
             const models = weaFiles.model.sort();
          
@@ -739,14 +740,4 @@ app.on('window-all-closed', () => {
 			app.quit();
 		}
 })
-
-
-
-    
-
-
-
- 
-
-
 
