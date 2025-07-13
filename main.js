@@ -20,7 +20,7 @@ const { app, BrowserWindow, dialog, ipcMain } = require('electron');
 const weapons_lua = require('./weapon_lua_func');
 const {verifyFields, verifyItemX7, verifyInfox7, verifyWeaponLua, verifyWeaponsXML , verifyItem_xml, weaponlua, iteminfox7, weaponxml, itemx7, itemxml,  melee, special, sentries, guns, snipers, heavies, thrown, id_range, verifyString_tableXML, verifyString_tablex7, iteminfoStringX7, iteminfoStringXML } = require('./verifiers');
 const { read } = require('fs');
-const { MakeTurrentDesc, MakeSubmachineDesc, MakeSparkRifleDesc, MakeSmashDesc, MakeShotGunDesc, MakeSharpshootingDesc, MakeSentryStunDesc, MakeSentryGunDesc, MakeSemiRifleDesc, MakeRailGunDesc, MakeRocketLauncherDesc, 
+const { MakeTurrentDesc, MakeSubmachineDesc, MakeSparkRifleDesc,MakeBreakerDesc, MakeSmashDesc, MakeShotGunDesc, MakeSharpshootingDesc, MakeSentryStunDesc, MakeSentryGunDesc, MakeSemiRifleDesc, MakeRailGunDesc, MakeRocketLauncherDesc, 
 MakeRevolverDesc, MakeRescueGunDesc, MakeMineGunDesc, MakeMindShockDesc, MakeMindHealDesc, MakeLightMachineGunDesc, MakeLightBombDesc, MakeHomingDesc, MakeHeavyMachineGunDesc, MakeHandGunDesc, MakeGaussDesc, MakeEarthBombDesc, MakeDualMagnumDesc, MakeCannonDesc, MakeAssaultDesc, MakeAirGunDesc, MakeVitalClawDesc, MakeTwinBladesDesc, MakeSigmaBladeDesc, MakeKatanaDesc, MakeIronBootsDesc, MakeFistDesc, MakeExoDesc, MakeDaggerDesc, MakeBatDesc, MakeCounterSwordDesc, MakePlasmaSwordDesc } = require('./makeItemInfo');
 const { addtodb } = require('./db')
 const { testConnection } = require('./conexion');
@@ -221,11 +221,11 @@ else if(!resItemInfo){
       const readItemx7 = await fsp.readFile(itemx7, 'utf8');
       
       //revisar esto mas tarde
-        let modifyItemX7 = readItemx7.replace(/<\/itemlist>\s*$/, await makeItemx7(id, item_dds, weaName,  nameID, tipID) + '</itemlist>');
+        let modifyItemX7 = readItemx7.replace(/<\/itemlist>\s*$/, await makeItemx7(id, item_dds, weaName, nameID, tipID, weaType) + '</itemlist>');
         
       
         if(!modifyItemX7 || modifyItemX7  === '' || modifyItemX7.length === 0){
-        let newItemX7 = await makeItemx7(id, item_dds, weaName, nameID, tipID);
+        let newItemX7 = await makeItemx7(id, item_dds, weaName, nameID, tipID, weaType);
             modifyItemX7 = `
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <itemlist>
@@ -239,11 +239,11 @@ else if(!resItemInfo){
                //Here I am reading itemXML
       const readItemXML = await fsp.readFile(itemxml, 'utf8');
     
-        let modifyItemXML = readItemXML.replace(/<\/itemlist>\s*$/, await makeItemx7(id, item_dds, weaName,  nameID, tipID) + '</itemlist>');
+        let modifyItemXML = readItemXML.replace(/<\/itemlist>\s*$/, await makeItemx7(id, item_dds, weaName, nameID, tipID, weaType) + '</itemlist>');
       
       
         if(!modifyItemXML || modifyItemXML === '' || modifyItemXML.length === 0){
-        let newItemXML = await makeItemx7(id, item_dds, weaName, nameID, tipID);
+        let newItemXML = await makeItemx7(id, item_dds, weaName, nameID, tipID, weaType);
             modifyItemXML = `
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <itemlist>
@@ -435,6 +435,7 @@ async function Ejecutar(iteminfoID, weapon_files, host, user, pass, db){
             //weatype is the weapon type y weaFiles its folder. 
             
 
+            console.log('EL ESSSS', weaType);
             const imgs = weaFiles.imgs;
             const models = weaFiles.model.sort();
          
