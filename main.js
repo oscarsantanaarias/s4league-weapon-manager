@@ -497,8 +497,8 @@ async function Ejecutar(iteminfoID, weapon_files, host, user, pass, db){
                         const scnName = nameMatch ? nameMatch[1] + '.scn' : null;
 
                         if (!scnName) {
-                          console.warn(`No se pudo extraer nombre del archivo desde: ${imgs[a]}`);
-                          continue; // o manejar de otra forma
+                          console.warn(`Name could not be extracted!!: ${imgs[a]}`);
+                          continue; 
                         }
 
                         await addNewItem(inicio, final, scnName, imgs[a], iteminfoID, weaType, imgsrc, weaponName, host, user, pass, db);
