@@ -493,8 +493,15 @@ async function Ejecutar(iteminfoID, weapon_files, host, user, pass, db){
         
                         await addNewItem(inicio, final, models[i] ,imgs[a], iteminfoID, weaType, imgsrc, weaponName, host, user, pass, db);
                     } else if(models.includes(cleanImg + '_r.scn') && models.includes(cleanImg + '_l.scn') || models.includes(cleanImg.split('icon_')[1] + '_r.scn') && models.includes(cleanImg.split('icon_')[1]  + '_l.scn') || models.includes(cleanImg.split('Icon_')[1] + '_r.scn') && models.includes(cleanImg.split('Icon_')[1]  + '_l.scn')){
-                     
-                         await addNewItem(inicio, final, imgs[a].split('.')[0] + '.scn' ,imgs[a], iteminfoID, weaType, imgsrc, weaponName, host, user, pass, db);
+                      const nameMatch = imgs[a].match(/(?:icon_|Icon_)([^.]+)/);
+                        const scnName = nameMatch ? nameMatch[1] + '.scn' : null;
+
+                        if (!scnName) {
+                          console.warn(`No se pudo extraer nombre del archivo desde: ${imgs[a]}`);
+                          continue; // o manejar de otra forma
+                        }
+
+                        await addNewItem(inicio, final, scnName, imgs[a], iteminfoID, weaType, imgsrc, weaponName, host, user, pass, db);
                     }
                 }
             }
